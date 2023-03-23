@@ -7,7 +7,7 @@ function App() {
   const [value, setValue] = useState("");
   const [currpop, setPop] = useState("");
   const [currtop, setTop] = useState("");
-  const [stack, setStack] = useState("");
+  const [stack, setStack] = useState([]);
 
   const handleChange =(e) => {
     var curr = e.target.value;
@@ -44,7 +44,7 @@ function App() {
       <h1 className="header">Stack</h1>
       <div className="row">
         <div className="col md-6 stack">
-          { stack.map((item, key) =>(
+          {stack.map((item, key) => (
           <Element key={key} val={item}/>
           ))}
         </div>
